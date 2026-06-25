@@ -86,7 +86,7 @@ st.set_page_config(page_title="심부전 분석", layout="wide")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r'D:\ml_study\heart_failure.csv')
+    df = pd.read_csv('heart_failure.csv')
     df["사망여부"] = df["DEATH_EVENT"].map({0: "생존", 1: "사망"})
     return df
 
